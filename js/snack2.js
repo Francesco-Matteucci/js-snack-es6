@@ -39,3 +39,42 @@ console.log(excellentStudents);
 // Uso ancora una volta filter per stabilire quali studenti hanno sia la media-voto superiore a 70 che l'ID superiore a 120
 const qualifiedStudents = students.filter(student => student.grades > 70 && student.id > 120);
 console.log(qualifiedStudents);
+
+
+//! ---------- ALTERNATIVA CON REDUCE ----------
+
+//Creo un array di oggetti per gli studenti
+const studenti = [
+    { id: 213, nome: 'Marco della Rovere', voti: 78 },
+    { id: 110, nome: 'Paola Cortellessa', voti: 96 },
+    { id: 250, nome: 'Andrea Mantegna', voti: 48 },
+    { id: 145, nome: 'Gaia Borromini', voti: 74 },
+    { id: 196, nome: 'Luigi Grimaldello', voti: 68 },
+    { id: 102, nome: 'Piero della Francesca', voti: 50 },
+    { id: 120, nome: 'Francesca da Polenta', voti: 84 }
+];
+
+// Utilizzo il reduce trasformo i nomi degli studenti in maiuscolo 
+const nomiMaiuscoli = studenti.reduce((acc, studente) => {
+    acc.push(studente.nome.toUpperCase());
+    return acc;
+}, []);
+console.log(nomiMaiuscoli);
+
+// Con reduce trovo tutti gli studenti con media-voto superiore a 70
+const studentiConVotiAlti = studenti.reduce((acc, studente) => {
+    if (studente.voti > 70) {
+        acc.push(studente);
+    }
+    return acc;
+}, []);
+console.log(studentiConVotiAlti);
+
+// Uso ancora una volta reduce per stabilire quali studenti hanno sia la media-voto superiore a 70 che l'ID superiore a 120
+const studentiSelezionati = studenti.reduce((acc, studente) => {
+    if (studente.voti > 70 && studente.id > 120) {
+        acc.push(studente);
+    }
+    return acc;
+}, []);
+console.log(studentiSelezionati);
