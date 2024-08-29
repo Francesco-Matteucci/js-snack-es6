@@ -44,3 +44,30 @@ const guestList = guests.map((guestName, i) => {
 
 // Stampo in console
 console.log(guestList);
+
+
+//! ---------- ALTERNATIVA CON REDUCE ----------
+
+// Creo una costante per il nome del tavolo
+const nomeTavolo = 'Tavolo Vip';
+
+// Creo una costante per cambiare il nome della lista ospiti, cosi da presentare l'alternativa con reduce senza che cozzi con la soluzione con map
+const ospiti = guests;
+
+// Creo la lista degli ospiti
+const listaSegnaposti = ospiti.reduce((acc, ospite, i) => {
+
+    const segnaposto = {
+        nomeTavolo: nomeTavolo,
+        nomeOspite: ospite,
+        posto: i + 1
+    };
+
+    // Aggiungo l'oggetto all'accumulatore
+    acc.push(segnaposto);
+    return acc;
+
+}, []);
+
+// Stampo in console
+console.log(listaSegnaposti);
