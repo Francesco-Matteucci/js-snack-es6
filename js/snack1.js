@@ -12,6 +12,7 @@ posto occupato (place),
 Generiamo e stampiamo in console la lista per i segnaposto.
 */
 
+//TODO --------- SVOLGIMENTO SNACK 1 ----------
 
 // Creo una costante per il nome del tavolo
 const tableName = 'Tavolo Vip';
@@ -44,7 +45,6 @@ const guestList = guests.map((guestName, i) => {
 
 // Stampo in console
 console.log(guestList);
-
 
 //! ---------- ALTERNATIVA CON REDUCE ----------
 

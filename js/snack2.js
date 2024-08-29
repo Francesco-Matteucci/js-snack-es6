@@ -17,6 +17,8 @@ Id  Name                Grades
 
 */
 
+//TODO --------- SVOLGIMENTO SNACK 2 ----------
+
 //Creo un array di oggetti per gli studenti
 const students = [
     { id: 213, name: 'Marco della Rovere', grades: 78 },
@@ -39,7 +41,6 @@ console.log(excellentStudents);
 // Uso ancora una volta filter per stabilire quali studenti hanno sia la media-voto superiore a 70 che l'ID superiore a 120
 const qualifiedStudents = students.filter(student => student.grades > 70 && student.id > 120);
 console.log(qualifiedStudents);
-
 
 //! ---------- ALTERNATIVA CON REDUCE ----------
 
