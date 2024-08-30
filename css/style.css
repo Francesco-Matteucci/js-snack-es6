@@ -1,0 +1,70 @@
+body {
+    background-color: #f4f4f9;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.snack-3 .card {
+    max-width: 350px;
+    margin: 0 auto;
+    background-color: #fffae6;
+
+}
+
+.snack-3 .card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.snack-3 .card-title {
+    color: #e67e22;
+
+    font-weight: bold;
+}
+
+.snack-3 .card-text {
+    color: #555;
+}
+
+.snack-4 .card {
+    background-color: #eaf8ff;
+
+}
+
+.snack-4 .card-title {
+    color: #3498db;
+
+    font-weight: bold;
+}
+
+.snack-4 .card-text {
+    color: #555;
+}
+
+.snack-3,
+.snack-4 {
+    margin-bottom: 40px;
+}
+
+.card:hover .card-title {
+    color: #d35400;
+}
+
+.card:hover .card-text {
+    color: #333;
+}

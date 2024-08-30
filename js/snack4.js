@@ -42,3 +42,44 @@ console.log("Nomi e proprietà delle squadre:", teams);
 
 // Stampo in console l'array con le squadre e i falli subiti
 console.log("Nomi e falli subiti:", teamsFouls);
+
+// Creo una funzione per stampare i risultati in pagina
+function printToPage(array, containerId, includePoints = true) {
+    const container = document.getElementById(containerId);
+    container.classList.add('row', 'gy-4');
+
+    array.forEach(item => {
+        const col = document.createElement('div');
+        col.classList.add('col-md-4');
+
+        const card = document.createElement('div');
+        card.classList.add('card', 'h-100');
+
+        const cardBody = document.createElement('div');
+        cardBody.classList.add('card-body');
+
+        const title = document.createElement('h5');
+        title.classList.add('card-title');
+        title.textContent = item.teamName;
+
+        const text = document.createElement('p');
+        text.classList.add('card-text');
+        if (includePoints) {
+            text.innerHTML = `Punti: ${item.points}<br>Falli: ${item.fouls}`;
+        } else {
+            text.innerHTML = `Falli: ${item.fouls}`;
+        }
+
+        cardBody.appendChild(title);
+        cardBody.appendChild(text);
+        card.appendChild(cardBody);
+        col.appendChild(card);
+        container.appendChild(col);
+    });
+}
+
+// Stampo l'array originale nel DOM
+printToPage(teams, 'original-teams');
+
+// Stampo l'array con nomi e falli subiti nella pagina
+printToPage(teamsFouls, 'teams-fouls', false);

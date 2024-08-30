@@ -33,3 +33,15 @@ const { bikeName, weight } = lightestBike;
 
 // Stampo il risultato in console mostrando il nome della bici più leggera e il suo peso
 console.log(`La bici più leggera è ${bikeName}, con un peso di ${weight} kg.`);
+
+// Stampo il risultato nel DOM
+const lightestBikeContainer = document.getElementById('lightest-bike');
+lightestBikeContainer.innerHTML = `
+    <div class="card h-100">
+        <img src="img/bici.jpg" class="card-img-top" alt="Bici">
+        <div class="card-body">
+            <h5 class="card-title">${bikeName}</h5>
+            <p class="card-text">Peso: ${weight} kg</p>
+        </div>
+    </div>
+`;
