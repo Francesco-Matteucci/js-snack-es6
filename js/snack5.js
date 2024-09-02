@@ -21,4 +21,15 @@ const capitalizedStrings = arr.map(str => {
 });
 
 // Stampo in console il risultato
-console.log(capitalizedStrings); 
+console.log(capitalizedStrings);
+
+
+//!SOLUZIONE CONTRARIA (prima lettera MAIUSCOLA e tutto il resto minuscolo)
+
+const reverseCapitalizedStrings = arr.map(str => {
+    const firstLetter = str.charAt(0).toLowerCase();
+    const restOfString = str.slice(1).toUpperCase();
+    return firstLetter + restOfString;
+});
+
+console.log(reverseCapitalizedStrings);
