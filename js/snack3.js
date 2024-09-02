@@ -45,3 +45,4 @@ lightestBikeContainer.innerHTML = `
         </div>
     </div>
 `;
+
