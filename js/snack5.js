@@ -10,8 +10,7 @@ const arr = ['pippo', 'PLUTO', 'Paperino'];
 
 // Utilizzo il metodo map per creare un nuovo array 
 const capitalizedStrings = arr.map(str => {
-    // Per ogni stringa nell'array..
-    // Prendo il primo carattere e lo convertiamo in maiuscolo (.toUpperCase())
+    // Per ogni stringa nell'array prendo il primo carattere e lo converto in maiuscolo
     const firstLetter = str.charAt(0).toUpperCase();
 
     // Prendo poi il resto della stringa, a partire dal secondo carattere e lo converto in minuscolo
