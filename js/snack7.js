@@ -17,7 +17,7 @@ const people = [
 // 2. Creo un nuovo array con le frasi
 const phrases = people.map(person => {
     const { firstName, lastName, age } = person;
-    const canDrive = age >= 18 ? 'può guidare' : 'non può guidare';
+    const canDrive = age >= 18 ? `può guidare, in quanto ha ${age} anni` : `non può guidare, in quanto ha solo ${age} anni, perciò minorenne`
     return `Il signor ${firstName} ${lastName} ${canDrive}`;
 });
 
